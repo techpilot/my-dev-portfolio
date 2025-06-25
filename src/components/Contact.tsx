@@ -25,7 +25,7 @@ export default function Contact() {
                                 Your Name
                             </label>
                             <input type="text"
-                                   className="w-full py-2 text-sm text-[var(--primary)] placeholder-[var(--primary)] border-b border-[var(--input-color)] outline-none"
+                                   className="w-full py-2 text-sm text-[#3d155f] border-b border-[var(--input-color)] outline-none"
                                    placeholder="Enter your name"/>
                         </div>
 
@@ -34,7 +34,7 @@ export default function Contact() {
                                 Email Address
                             </label>
                             <input type="text"
-                                   className="w-full py-2 text-sm text-[var(--primary)] placeholder-[var(--primary)] border-b border-[var(--input-color)] outline-none"
+                                   className="w-full py-2 text-sm text-[#3d155f] border-b border-[var(--input-color)] outline-none"
                                    placeholder="Enter your email address"/>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ export default function Contact() {
                             Your Message
                         </label>
                         <input type="text"
-                               className="w-full py-2 text-sm text-[var(--primary)] placeholder-[var(--primary)] border-b border-[var(--input-color)] outline-none"
+                               className="w-full py-2 text-sm text-[#3d155f] border-b border-[var(--input-color)] outline-none"
                                placeholder="Enter your message"/>
                     </div>
 

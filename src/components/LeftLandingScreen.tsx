@@ -34,16 +34,14 @@ export default function LeftLandingScreen() {
                         efficient
                         code
                         and thrive
-                        in collaborative Agile environments.</p>
+                        in collaborative environments.</p>
                 </div>
 
                 <div className="flex flex-row gap-6 md:gap-12 mb-10 md:mb-0 mt-20 md:mt-12 lg:mt-28 w-full">
                     <p className="text-[var(--secondary)] text-xs lg:text-sm w-[50%]">I am all
                         in — attention to details, thoughtful, structured, and test-driven.</p>
                     <p className="text-[var(--secondary)] text-xs lg:text-sm w-[50%]">Crafting real-time
-                        systems,
-                        architecting
-                        automated bots, and mentoring the next generation of developers.</p>
+                        systems, architecting software, and mentoring the next generation of developers.</p>
                 </div>
             </div>
         </div>

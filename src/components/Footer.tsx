@@ -7,6 +7,8 @@ import evans from "@/assets/images/evans.png"
 import teams_icon from "@/assets/icons/teams.svg"
 import github_icon from "@/assets/icons/github.svg"
 import linkedin_icon from "@/assets/icons/linkedin.svg"
+import Link from "next/link";
+import React from "react";
 
 export default function Footer() {
     return (
@@ -28,8 +30,11 @@ export default function Footer() {
                         </div>
 
                         <div className="flex flex-col gap-3">
-                            <p className="hover:text-[var(--secondary)] cursor-pointer text-sm lg:text-base">My
-                                Work</p>
+                            <p className="hover:text-[var(--secondary)] cursor-pointer text-sm lg:text-base">
+                                <Link href={`/work`}>
+                                    My Work
+                                </Link>
+                            </p>
                             <p className="hover:text-[var(--secondary)] cursor-pointer text-sm lg:text-base">My
                                 Résumé</p>
                         </div>

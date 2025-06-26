@@ -1,7 +1,7 @@
 'use client'
 
 import {useState} from "react";
-import logo from "@/assets/svgs/full_logo.svg";
+import logo from "@/assets/icons/logo.svg";
 import Image from "next/image";
 import nav_pri from "@/assets/svgs/nav_pri.svg";
 import Work from "@/components/Work";
@@ -17,7 +17,7 @@ export default function MyWork() {
         <div className="w-screen relative">
             <div className="flex items-center justify-between md:fixed top-0 left-0 right-0 z-20">
                 <div className="h-[70px] bg-[var(--primary)] flex-1 px-7 flex items-center">
-                    <Image src={logo} alt="" className="w-[120px] lg:w-[180px] cursor-pointer"
+                    <Image src={logo} alt="" className="w-[80px] lg:w-[120px] cursor-pointer"
                            onClick={() => router.push("/")}/>
                 </div>
                 <div className="h-[70px] w-[33%] bg-[var(--secondary)] px-14 pt-2 flex items-center">

@@ -8,12 +8,13 @@ export default function DesEng() {
         <div className="snap-start w-full lg:h-screen pt-76 pb-14 md:pt-20 lg:pt-52 lg:pb-0">
             <div
                 className="flex flex-col md:flex-row justify-between gap-10 md:gap-32 px-12 md:px-14 lg:px-28 xl:px-36 w-full md:h-[350px]">
-                <div className="relative h-full">
-                    <p className="text-4xl md:text-3xl lg:text-6xl font-bold lg:leading-16 text-[var(--primary)] z-50">Engineering</p>
-                    <p className="text-sm lg:text-base mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Accusantium aliquid culpa fuga laboriosam
-                        modi quam tenetur voluptates? Eius explicabo perferendis sint suscipit tempora. Culpa distinctio
-                        dolorum hic numquam officia perferendis?
+                <div className="relative h-full md:w-[50%] z-40">
+                    <p className="text-4xl md:text-3xl lg:text-6xl font-bold lg:leading-16 text-[var(--primary)]">Engineering</p>
+                    <p className="text-sm lg:text-base mt-4 text-[#3d155f]">In building applications, I&#39;m equipped
+                        with
+                        just
+                        the right tools, and can absolutely function independently of them to deliver fast, resilient
+                        solutions designed for scale — performance and scalability are a priority for me.
                     </p>
 
                     {/*left side absolutes*/}
@@ -27,12 +28,13 @@ export default function DesEng() {
                 </div>
 
 
-                <div className="relative h-full flex flex-col justify-end">
-                    <h2 className="text-4xl md:text-3xl lg:text-6xl font-bold lg:leading-16 text-[var(--primary)]">Cybersecurity</h2>
-                    <p className="text-sm lg:text-base mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Accusantium aliquid culpa fuga laboriosam
-                        modi quam tenetur voluptates? Eius explicabo perferendis sint suscipit tempora. Culpa distinctio
-                        dolorum hic numquam officia perferendis?
+                <div className="relative h-full md:w-[50%] flex flex-col justify-end">
+                    <h2 className="text-4xl md:text-3xl lg:text-6xl font-bold lg:leading-16 text-[var(--primary)]">Security</h2>
+                    <p className="text-sm lg:text-base mt-4 text-[#3d155f]">Being a professional software developer, I
+                        apply
+                        cybersecurity best practices at every stage of development. From securing APIs using JWT and
+                        OAuth2 to avoiding common vulnerabilities (XSS, SQL injection, CSRF), I create applications with
+                        security in mind and I bring a strong security outlook to every project.
                     </p>
 
                     {/*right side absolutes*/}
@@ -40,7 +42,7 @@ export default function DesEng() {
                         <Image src={bullet_pri} alt="" className="h-[10px]"/>
                     </div>
 
-                    <div className="hidden md:block absolute top-[17%] right-[20%]">
+                    <div className="hidden lg:block absolute top-[17%] right-[20%]">
                         <Image src={pri_dotted} alt="" className="w-[120px] h-[100px]"/>
                     </div>
                 </div>

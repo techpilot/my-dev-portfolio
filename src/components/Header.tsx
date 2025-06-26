@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import logo from "@/assets/svgs/full_logo.svg";
+import logo from "@/assets/icons/logo.svg";
 import nav_sec from "@/assets/svgs/nav_sec.svg";
 import nav_pri from "@/assets/svgs/nav_pri.svg";
 import {useState} from 'react';
@@ -17,7 +17,7 @@ export default function Header() {
 
                 {/*logo*/}
                 <Image src={logo} alt="" width={220} height={220}
-                       className="w-[120px] lg:w-[220px]"/>
+                       className="w-[80px] lg:w-[120px]"/>
 
                 {/*mobile nav bar*/}
                 <Image src={nav_sec} alt="" width={45} height={33}

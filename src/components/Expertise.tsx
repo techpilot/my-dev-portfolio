@@ -1,13 +1,42 @@
+'use client'
+
+import {useEffect, useRef} from "react";
 import Image from "next/image";
 import code_img from "@/assets/svgs/code.svg";
 import computer from "@/assets/icons/computer.svg"
 import react_icon from "@/assets/icons/react.svg"
 import code_icon from "@/assets/icons/code_icon.svg"
 import h3_img from "@/assets/svgs/h3.svg"
+import {componentsType} from "@/components/utils/datae";
 
 export default function Expertise() {
+    const expertiseRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    console.log('brief Section is in view!');
+                    localStorage.setItem('viewState', componentsType?.expertise);
+                }
+            },
+            {threshold: 0.5}
+        );
+
+        if (expertiseRef.current) {
+            observer.observe(expertiseRef.current);
+        }
+
+        return () => {
+            if (expertiseRef.current) {
+                observer.unobserve(expertiseRef.current);
+            }
+        };
+    }, []);
+
     return (
         <div
+            ref={expertiseRef}
             className="snap-start relative w-full lg:h-screen py-10 lg:py-28 flex flex-col items-center gap-5 lg:gap-10 bg-gradient-to-t from-[var(--third-bg)] to-[var(--primary)]">
             <h1 className="text-white text-4xl md:text-3xl lg:text-6xl font-extrabold">My Expertise</h1>
             <div

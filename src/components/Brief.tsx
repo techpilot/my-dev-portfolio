@@ -1,9 +1,37 @@
-import Image from "next/image";
+'use client'
+
+import {useEffect, useRef} from "react";
 import brief from "@/assets/svgs/brief.svg";
+import Image from "next/image";
+import {componentsType} from "@/components/utils/datae";
 
 export default function Brief() {
+    const briefRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    console.log('brief Section is in view!');
+                    localStorage.setItem('viewState', componentsType?.brief);
+                }
+            },
+            {threshold: 0.5}
+        );
+
+        if (briefRef.current) {
+            observer.observe(briefRef.current);
+        }
+
+        return () => {
+            if (briefRef.current) {
+                observer.unobserve(briefRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <div className="snap-start w-full lg:h-screen py-10 lg:py-28 bg-[var(--primary)]">
+        <div ref={briefRef} className="snap-start w-full lg:h-screen py-10 lg:py-28 bg-[var(--primary)]">
             <div
                 className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-32 px-12 md:px-14 lg:px-28 xl:px-36 w-full md:h-full">
                 <div className="w-full md:w-[37%]">

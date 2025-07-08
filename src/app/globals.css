@@ -11,6 +11,9 @@
     --input-color: #0067DE80;
     --black-bg: #0E0E0E;
     --work-font: #767676;
+    --pri-text: #3d155f;
+    --resume-link: #0067decc;
+    --resume-bg: #0067DE28;
 }
 
 @theme inline {
@@ -32,6 +35,9 @@
         --input-color: #0067DE80;
         --black-bg: #f1f1f1;
         --work-font: #767676;
+        --pri-text: #3d155f;
+        --resume-link: #0067decc;
+        --resume-bg: #0067DE28;
     }
 }
 

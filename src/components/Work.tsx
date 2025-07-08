@@ -9,6 +9,7 @@ import github_icon from "@/assets/icons/github_black.svg";
 import teams_icon from "@/assets/icons/teams_black.svg";
 import arrow_icon from "@/assets/icons/arrow.svg"
 import {projects} from "@/components/utils/datae";
+import Link from "next/link";
 
 const breakpointObj = {
     default: 2,
@@ -48,7 +49,7 @@ export default function Work() {
                 </p>
             </div>
 
-            <div className="w-full md:w-[80%] lg:w-[63%]">
+            <div className="w-full md:w-[85%] lg:w-[63%]">
                 <Masonry className="flex animate-slide-fwd" breakpointCols={breakpointObj}>
                     {handleProjectsFilter(selectedOption).map((project, index) => (
                         <ProjectCard
@@ -65,10 +66,10 @@ export default function Work() {
 
                 <div
                     className="flex flex-col gap-5 mt-10 p-2 pb-10">
-                    <div className="flex items-center gap-3 cursor-pointer">
+                    <Link href={'/resume'} className="flex items-center gap-3 cursor-pointer">
                         <p className="font-medium ">Let&apos;s to my resume</p>
                         <Image src={arrow_icon} alt="" className="w-7 mt-1"/>
-                    </div>
+                    </Link>
                     <div className="flex items-center gap-2">
                         <Image onClick={() => window.open("https://www.linkedin.com/in/stephenngwu", "_blank")}
                                src={linkedin_icon} alt=""

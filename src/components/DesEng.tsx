@@ -1,20 +1,47 @@
+'use client'
+
+import {useEffect, useRef} from "react";
 import Image from "next/image";
 import bullet_pri from "@/assets/svgs/bullet_pri.svg";
 import zigzag_pri from "@/assets/svgs/zigzag_pri.svg";
 import pri_dotted from "@/assets/svgs/pri_dotted.svg";
+import {componentsType} from "@/components/utils/datae";
 
 export default function DesEng() {
+    const desRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    console.log('des Section is in view!');
+                    localStorage.setItem('viewState', componentsType?.des);
+                }
+            },
+            {threshold: 0.5}
+        );
+
+        if (desRef.current) {
+            observer.observe(desRef.current);
+        }
+
+        return () => {
+            if (desRef.current) {
+                observer.unobserve(desRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <div className="snap-start w-full lg:h-screen pt-76 pb-14 md:pt-20 lg:pt-52 lg:pb-0">
+        <div ref={desRef} className="snap-start w-full lg:h-screen pt-76 pb-14 md:pt-20 lg:pt-52 lg:pb-0">
             <div
                 className="flex flex-col md:flex-row justify-between gap-10 md:gap-32 px-12 md:px-14 lg:px-28 xl:px-36 w-full md:h-[350px]">
                 <div className="relative h-full md:w-[50%] z-40">
                     <p className="text-4xl md:text-3xl lg:text-6xl font-bold lg:leading-16 text-[var(--primary)]">Engineering</p>
-                    <p className="text-sm lg:text-base mt-4 text-[#3d155f]">In building applications, I&#39;m equipped
-                        with
-                        just
-                        the right tools, and can absolutely function independently of them to deliver fast, resilient
-                        solutions designed for scale — performance and scalability are a priority for me.
+                    <p className="text-sm lg:text-base mt-4 text-[var(--pri-text)]">In building applications, I&#39;m
+                        equipped with just the right tools, and can absolutely function independently of them to deliver
+                        fast, resilient solutions designed for scale — performance and scalability are a priority for
+                        me.
                     </p>
 
                     {/*left side absolutes*/}
@@ -30,7 +57,9 @@ export default function DesEng() {
 
                 <div className="relative h-full md:w-[50%] flex flex-col justify-end">
                     <h2 className="text-4xl md:text-3xl lg:text-6xl font-bold lg:leading-16 text-[var(--primary)]">Security</h2>
-                    <p className="text-sm lg:text-base mt-4 text-[#3d155f]">Being a professional software developer, I
+                    <p className="text-sm lg:text-base mt-4 text-[var(--pri-text)]">Being a professional software
+                        developer,
+                        I
                         apply
                         cybersecurity best practices at every stage of development. From securing APIs using JWT and
                         OAuth2 to avoiding common vulnerabilities (XSS, SQL injection, CSRF), I create applications with

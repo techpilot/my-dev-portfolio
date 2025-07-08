@@ -1,14 +1,39 @@
 'use client';
-import {useState} from "react";
+
+import {useEffect, useRef, useState} from "react";
 import Image from "next/image";
 import arrow_icon from "@/assets/icons/arrow.svg";
 import arrow_sec from "@/assets/icons/arrow_sec.svg";
+import {componentsType} from "@/components/utils/datae";
 
 export default function Contact() {
     const [btnHover, setBtnHover] = useState(false);
+    const contactRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    console.log('brief Section is in view!');
+                    localStorage.setItem('viewState', componentsType?.contact);
+                }
+            },
+            {threshold: 0.5}
+        );
+
+        if (contactRef.current) {
+            observer.observe(contactRef.current);
+        }
+
+        return () => {
+            if (contactRef.current) {
+                observer.unobserve(contactRef.current);
+            }
+        };
+    }, []);
 
     return (
-        <div className="snap-start w-full lg:h-screen py-10 lg:py-28 px-12">
+        <div ref={contactRef} className="snap-start w-full lg:h-screen py-10 lg:py-28 px-12">
             <div className="w-full h-full flex flex-col md:items-center justify-center gap-4">
                 <h1 className="text-[var(--primary)] text-3xl lg:text-5xl font-bold">Send me a
                     message!</h1>

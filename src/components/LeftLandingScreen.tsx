@@ -26,8 +26,9 @@ export default function LeftLandingScreen() {
             <div
                 className="px-12 md:px-0 md:ml-14 lg:ml-28 xl:ml-36 mt-32 lg:mt-52 flex flex-col justify-center md:justify-between w-full md:w-[30rem] lg:w-[35rem]">
                 <div>
-                    <h1 className="text-5xl md:text-3xl lg:text-6xl font-bold lg:leading-16 text-[var(--secondary)]">Software <br/> Engineer<span
-                        className="text-white rounded-full">.</span>
+                    <h1 className="text-5xl md:text-3xl lg:text-6xl font-bold lg:leading-16 text-[var(--secondary)]">Software <br/> Engineer
+                        <span
+                            className="bg-white rounded-full h-2.5 w-2.5 inline-block -ml-1"></span>
                     </h1>
                     <p className="text-white text-base mt-5 md:w-[23rem] lg:w-[30rem]">I focus on writing
                         clean,

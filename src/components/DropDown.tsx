@@ -48,41 +48,111 @@ const DropDown: React.FC<DropDownProps> = ({isDropdownOpen, setIsDropdownOpen}) 
                                        onClick={() => setIsDropdownOpen(false)}/>
                             </div>
 
-                            {!isHomePage && <p className="px-4 py-2 text-[var(--primary)] cursor-pointer">
-                                <Link href={`/`}>
-                                    Home
-                                </Link>
-                            </p>}
+                            {!isHomePage &&
+                                <div className="max-w-max relative group">
+                                    <p className="px-4 py-2 text-[var(--primary)] cursor-pointer">
+                                        <Link href={`/`}>
+                                            Home
+                                        </Link>
+                                    </p>
 
-                            {!isWorkPage && <p className="px-4 py-2 text-[var(--primary)] cursor-pointer">
-                                <Link href={`/work`}>
-                                    My Work
-                                </Link>
-                            </p>}
-                            <p className="px-4 py-2 text-[var(--primary)] cursor-pointer">My Résumé </p>
+                                    <span
+                                        className={`w-[1.2rem] h-[1.7rem] bg-transparent absolute top-2 right-2 -z-10 transition-transform duration-300 ease-in-out transform -translate-x-full group-hover:translate-x-0 group-hover:bg-[var(--resume-bg)]`}></span>
+                                </div>
+                            }
 
-                            <p className="mt-5 text-lg lg:text-xl px-4 py-2 text-[var(--work-font)]">Let&apos;s
-                                collaborate</p>
-                            <p><a href="mailto:ngwustephen99@gmail.com"
-                                  className="text-sm lg:text-base px-4 py-2 text-[var(--primary)]">ngwustephen99@gmail.com</a>
+                            {!isWorkPage &&
+                                <div className="max-w-max relative group">
+                                    <p className="pl-4 text-[var(--primary)] cursor-pointer max-w-max">
+                                        <Link href={`/work`}>
+                                            My Work
+                                        </Link>
+                                    </p>
+
+                                    <span
+                                        className={`w-[1.2rem] h-[1.7rem] bg-transparent absolute -top-0.5 -right-2 -z-10 transition-transform duration-300 ease-in-out transform -translate-x-full group-hover:translate-x-0 group-hover:bg-[var(--resume-bg)]`}></span>
+                                </div>
+                            }
+
+                            <div className="max-w-max relative group">
+                                <p className="pl-4 py-2 text-[var(--primary)] cursor-pointer">
+                                    <Link href={`/resume`}>
+                                        My Résumé
+                                    </Link>
+                                </p>
+
+                                <span
+                                    className={`w-[1.2rem] h-[1.7rem] bg-transparent absolute top-2 -right-2 -z-10 transition-transform duration-300 
+                                        ease-in-out transform -translate-x-full group-hover:translate-x-0 group-hover:bg-[var(--resume-bg)]`}></span>
+                            </div>
+
+                            <p className="mt-5 text-lg lg:text-xl px-4 py-2 text-[var(--work-font)]">
+                                Let&apos;s collaborate
                             </p>
-                            <p><a href="https://teams.live.com/l/invite/FEAbewk99kGbLP5AgE" target="_blank"
-                                  className="text-sm lg:text-base px-4 py-2 text-[var(--primary)]">Teams</a>
-                            </p>
+
+                            <div className="max-w-max relative group">
+                                <p>
+                                    <a href="mailto:ngwustephen99@gmail.com"
+                                       className="text-sm lg:text-base px-4 py-2 text-[var(--primary)]">ngwustephen99@gmail.com
+                                    </a>
+                                </p>
+                                <span
+                                    className={`w-[1.2rem] h-[1.7rem] bg-transparent absolute top-0 right-3 -z-10 transition-transform duration-300 ease-in-out 
+                                        transform -translate-x-full group-hover:translate-x-0 group-hover:bg-[var(--resume-bg)]`}></span>
+                            </div>
+
+
+                            <div className="max-w-max relative group">
+                                <p>
+                                    <a href="https://teams.live.com/l/invite/FEAbewk99kGbLP5AgE" target="_blank"
+                                       className="text-sm lg:text-base px-4 py-2 text-[var(--primary)]">
+                                        Microsoft Teams
+                                    </a>
+                                </p>
+                                <span
+                                    className={`w-[1.2rem] h-[1.7rem] bg-transparent absolute top-0 right-3 -z-10 transition-transform duration-300 ease-in-out 
+                                        transform -translate-x-full group-hover:translate-x-0 group-hover:bg-[var(--resume-bg)]`}></span>
+                            </div>
 
                             <div className="flex items-center gap-3 mt-5">
-                                <p><a href="https://www.linkedin.com/in/stephenngwu" target="_blank"
-                                      className="text-sm lg:text-sm font-medium px-4 py-2 text-[var(--primary)]">LN</a>
-                                </p>
-                                <p><a href="https://github.com/techpilot" target="_blank"
-                                      className="text-sm lg:text-sm font-medium px-4 py-2 text-[var(--primary)]">GH</a>
-                                </p>
-                                <p><a href="https://teams.live.com/l/invite/FEAbewk99kGbLP5AgE" target="_blank"
-                                      className="text-sm lg:text-sm font-medium px-4 py-2 text-[var(--primary)]">TM</a>
-                                </p>
+                                <div className="max-w-max relative group">
+                                    <p>
+                                        <a href="https://www.linkedin.com/in/stephenngwu" target="_blank"
+                                           className="text-sm lg:text-sm font-medium px-4 py-2 text-[var(--primary)]">
+                                            LN
+                                        </a>
+                                    </p>
+                                    <span
+                                        className={`w-[1.2rem] h-[1.7rem] bg-transparent absolute top-0 right-2 -z-10 transition-transform duration-300 ease-in-out 
+                                        transform -translate-x-[50%] group-hover:translate-x-0 group-hover:bg-[var(--resume-bg)]`}></span>
+                                </div>
+
+                                <div className="max-w-max relative group">
+                                    <p>
+                                        <a href="https://github.com/techpilot" target="_blank"
+                                           className="text-sm lg:text-sm font-medium px-4 py-2 text-[var(--primary)]">
+                                            GH
+                                        </a>
+                                    </p>
+                                    <span
+                                        className={`w-[1.2rem] h-[1.7rem] bg-transparent absolute top-0 right-2 -z-10 transition-transform duration-300 ease-in-out 
+                                        transform -translate-x-[50%] group-hover:translate-x-0 group-hover:bg-[var(--resume-bg)]`}></span>
+                                </div>
+
+                                <div className="max-w-max relative group">
+                                    <p>
+                                        <a href="https://teams.live.com/l/invite/FEAbewk99kGbLP5AgE" target="_blank"
+                                           className="text-sm lg:text-sm font-medium px-4 py-2 text-[var(--primary)]">
+                                            TM
+                                        </a>
+                                    </p>
+
+                                    <span
+                                        className={`w-[1.2rem] h-[1.7rem] bg-transparent absolute top-0 right-2 -z-10 transition-transform duration-300 ease-in-out 
+                                        transform -translate-x-[50%] group-hover:translate-x-0 group-hover:bg-[var(--resume-bg)]`}></span>
+                                </div>
                             </div>
                         </div>
-
                     </motion.div>
                 )}
             </AnimatePresence>

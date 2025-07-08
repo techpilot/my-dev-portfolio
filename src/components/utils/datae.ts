@@ -103,3 +103,12 @@ export const projects = [
         github: "https://github.com/techpilot/SafeSwap.git"
     },
 ]
+
+export const componentsType = {
+    landing: "landing",
+    des: "des",
+    what: "what",
+    brief: "brief",
+    expertise: "expertise",
+    contact: "contact",
+}

@@ -20,9 +20,9 @@ export default function MyWork() {
                     <Image src={logo} alt="" className="w-[80px] lg:w-[120px] cursor-pointer"
                            onClick={() => router.push("/")}/>
                 </div>
-                <div className="h-[70px] w-[33%] bg-[var(--secondary)] px-14 pt-2 flex items-center">
+                <div className="h-[70px] w-[33%] bg-[var(--secondary)] px-10 lg:px-14 pt-2 flex items-center">
                     <Image src={nav_pri} alt="" width={45} height={33}
-                           className="cursor-pointer ml-auto my-auto"
+                           className="cursor-pointer ml-auto my-auto w-[35px] lg:w-[45px] h-[25px] lg:h-[33px]"
                            onClick={() => setIsDropdownOpen(!isDropdownOpen)}/>
                 </div>
             </div>

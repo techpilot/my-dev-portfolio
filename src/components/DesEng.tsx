@@ -6,16 +6,18 @@ import bullet_pri from "@/assets/svgs/bullet_pri.svg";
 import zigzag_pri from "@/assets/svgs/zigzag_pri.svg";
 import pri_dotted from "@/assets/svgs/pri_dotted.svg";
 import {componentsType} from "@/components/utils/datae";
+import {useLocalStorage} from "@/hooks/useLocalStorage";
 
 export default function DesEng() {
     const desRef = useRef(null);
+    const [, setValue] = useLocalStorage('viewState', 'landing');
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    console.log('des Section is in view!');
                     localStorage.setItem('viewState', componentsType?.des);
+                    setValue(componentsType?.des)
                 }
             },
             {threshold: 0.5}
@@ -30,7 +32,7 @@ export default function DesEng() {
                 observer.unobserve(desRef.current);
             }
         };
-    }, []);
+    }, [setValue]);
 
     return (
         <div ref={desRef} className="snap-start w-full lg:h-screen pt-76 pb-14 md:pt-20 lg:pt-52 lg:pb-0">

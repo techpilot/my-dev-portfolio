@@ -4,16 +4,18 @@ import {useEffect, useRef} from "react";
 import brief from "@/assets/svgs/brief.svg";
 import Image from "next/image";
 import {componentsType} from "@/components/utils/datae";
+import {useLocalStorage} from "@/hooks/useLocalStorage";
 
 export default function Brief() {
     const briefRef = useRef(null);
+    const [, setValue] = useLocalStorage('viewState', 'landing');
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    console.log('brief Section is in view!');
                     localStorage.setItem('viewState', componentsType?.brief);
+                    setValue(componentsType?.brief)
                 }
             },
             {threshold: 0.5}
@@ -28,7 +30,7 @@ export default function Brief() {
                 observer.unobserve(briefRef.current);
             }
         };
-    }, []);
+    }, [setValue]);
 
     return (
         <div ref={briefRef} className="snap-start w-full lg:h-screen py-10 lg:py-28 bg-[var(--primary)]">

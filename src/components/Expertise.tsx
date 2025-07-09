@@ -8,9 +8,11 @@ import react_icon from "@/assets/icons/react.svg"
 import code_icon from "@/assets/icons/code_icon.svg"
 import h3_img from "@/assets/svgs/h3.svg"
 import {componentsType} from "@/components/utils/datae";
+import {useLocalStorage} from "@/hooks/useLocalStorage";
 
 export default function Expertise() {
     const expertiseRef = useRef(null);
+    const [, setValue] = useLocalStorage('viewState', 'landing');
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -18,6 +20,7 @@ export default function Expertise() {
                 if (entry.isIntersecting) {
                     console.log('brief Section is in view!');
                     localStorage.setItem('viewState', componentsType?.expertise);
+                    setValue(componentsType?.expertise)
                 }
             },
             {threshold: 0.5}
@@ -32,7 +35,7 @@ export default function Expertise() {
                 observer.unobserve(expertiseRef.current);
             }
         };
-    }, []);
+    }, [setValue]);
 
     return (
         <div

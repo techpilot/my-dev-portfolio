@@ -4,11 +4,13 @@ import {useEffect, useRef, useState} from "react";
 import arrow_icon from "@/assets/icons/arrow.svg"
 import arrow_sec from "@/assets/icons/arrow_sec.svg"
 import {componentsType} from "@/components/utils/datae";
+import {useLocalStorage} from "@/hooks/useLocalStorage";
 
 export default function WhatIDo() {
     const [btnHover, setBtnHover] = useState(false);
     const [btnTwoHover, setBtnTwoHover] = useState(false);
     const whatRef = useRef(null);
+    const [, setValue] = useLocalStorage('viewState', 'landing');
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -16,6 +18,7 @@ export default function WhatIDo() {
                 if (entry.isIntersecting) {
                     console.log('brief Section is in view!');
                     localStorage.setItem('viewState', componentsType?.what);
+                    setValue(componentsType?.contact)
                 }
             },
             {threshold: 0.5}
@@ -30,7 +33,7 @@ export default function WhatIDo() {
                 observer.unobserve(whatRef.current);
             }
         };
-    }, []);
+    }, [setValue]);
 
     return (
         <div ref={whatRef}

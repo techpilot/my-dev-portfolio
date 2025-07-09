@@ -12,6 +12,33 @@ const poppins = Poppins({
 })
 
 export default function Resume() {
+    const handleDownload = async () => {
+        try {
+            const response = await fetch('/resume.pdf');
+
+            if (!response.ok) {
+                throw new Error('Failed to download PDF');
+            }
+
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+
+            link.href = url;
+            link.download = 'dev-stephen-resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+
+            // Cleanup
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error('Download failed:', error);
+            alert('Failed to download PDF. Please try again.');
+        }
+    };
+
+
     return (
         <section id="resume" className="resume">
             <div className="container mx-auto my-[40px] p-4 md:p-[30px] bg-[var(--resume-bg)] relative">
@@ -19,7 +46,7 @@ export default function Resume() {
                     <Image onClick={() => window.open("https://www.linkedin.com/in/stephenngwu", "_blank")}
                            src={linkedin} alt="" className="w-4 h-4 cursor-pointer"/>
 
-                    <div className="flex items-center gap-1 cursor-pointer">
+                    <div onClick={handleDownload} className="flex items-center gap-1 cursor-pointer">
                         <Image src={download_icon} alt="" className="w-4 h-4"/>
                         <p className="text-sm text-[var(--pri-text)]">Download</p>
                     </div>

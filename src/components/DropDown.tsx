@@ -76,7 +76,7 @@ const DropDown: React.FC<DropDownProps> = ({isDropdownOpen, setIsDropdownOpen}) 
 
                             <div className="max-w-max relative group">
                                 <p className="pl-4 py-2 text-[var(--primary)] cursor-pointer">
-                                    <Link href={`/resume`}>
+                                    <Link href={`/resume`} target="_blank">
                                         My Résumé
                                     </Link>
                                 </p>

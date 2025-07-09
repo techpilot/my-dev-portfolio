@@ -30,13 +30,16 @@ export default function Footer() {
                         </div>
 
                         <div className="flex flex-col gap-3">
-                            <p className="hover:text-[var(--secondary)] cursor-pointer text-sm lg:text-base">
+                            <p className="hover:text-[var(--secondary)] cursor-pointer text-sm lg:text-base max-w-max">
                                 <Link href={`/work`}>
                                     My Work
                                 </Link>
                             </p>
-                            <p className="hover:text-[var(--secondary)] cursor-pointer text-sm lg:text-base">My
-                                Résumé</p>
+                            <p className="hover:text-[var(--secondary)] cursor-pointer text-sm lg:text-base max-w-max">
+                                <Link href={`/resume`} target='_blank'>
+                                    My Résumé
+                                </Link>
+                            </p>
                         </div>
                     </div>
 

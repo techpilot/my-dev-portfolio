@@ -15,8 +15,6 @@ export default function Contact() {
     const [successMsg, setSuccessMsg] = useState<string | null>('');
     const [isLoading, setIsLoading] = useState(false);
 
-
-    console.log(".env", process.env.NEXT_PUBLIC_EMAILJS_SERVICE);
     const handleSubmit = (e: any) => {
         e.preventDefault();
 

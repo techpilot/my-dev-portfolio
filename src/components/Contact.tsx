@@ -21,7 +21,7 @@ export default function Contact() {
         e.preventDefault();
 
         const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE;
-        const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE;
+        const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE || 'template_xpx0klq';
         const key = process.env.NEXT_PUBLIC_EMAILJS_KEY;
         if (key) {
             setIsLoading(true);

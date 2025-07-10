@@ -143,7 +143,7 @@ export default function Contact() {
                         initial={{opacity: 0, y: -10}}
                         animate={{opacity: 1, y: 0}}
                         exit={{opacity: 0, y: -10}}
-                        className="fixed right-2 top-10 md:right-5 lg:right-10 mt-2 w-[95vw] md:w-[20rem] bg-white rounded shadow-lg p-5 z-50"
+                        className="fixed right-2 top-24 md:top-10 md:right-5 lg:right-10 mt-2 w-[95vw] md:w-[20rem] bg-white rounded shadow-lg p-5 z-50"
                     >
                         <p className="text-sm font-medium text-black">
                             {successMsg}

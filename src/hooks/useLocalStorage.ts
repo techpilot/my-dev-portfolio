@@ -21,7 +21,6 @@ export function useLocalStorage(key: string, defaultValue: string): [string, (va
         if (typeof window !== 'undefined') {
             try {
                 const stored = localStorage.getItem('viewState');
-                console.log('storedValue', stored);
                 return stored ? stored : defaultValue;
             } catch (error) {
                 console.error(`Error parsing localStorage value for key "${key}":`, error);
@@ -48,7 +47,6 @@ export function useLocalStorage(key: string, defaultValue: string): [string, (va
         // Custom event for same-tab changes
         const handleCustomStorage = (e: LocalStorageChangeEvent) => {
             if (e.detail.key === key) {
-                console.log('e.detail.newValue', e.detail.newValue);
                 setValue(e.detail.newValue);
             }
         };

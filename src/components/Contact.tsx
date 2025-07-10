@@ -15,37 +15,42 @@ export default function Contact() {
     const [successMsg, setSuccessMsg] = useState<string | null>('');
     const [isLoading, setIsLoading] = useState(false);
 
+
+    console.log(".env", process.env.NEXT_PUBLIC_EMAILJS_SERVICE);
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        console.log(formData.current)
 
-        setIsLoading(true);
-        emailjs
-            .sendForm("service_0ky2fxk", "template_xpx0klq", formData?.current, {
-                publicKey: "zf_P8T6ellyiIopW-",
-            })
-            .then(
-                () => {
-                    console.log("SUCCESS!");
-                    setIsLoading(false);
-                    setSuccessMsg("Boom! Your message just landed in my inbox.");
+        const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE;
+        const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE;
+        const key = process.env.NEXT_PUBLIC_EMAILJS_KEY;
+        if (key) {
+            setIsLoading(true);
+            emailjs
+                .sendForm(`${serviceID}`, `${templateID}`, formData?.current, {
+                    publicKey: `${key}`,
+                })
+                .then(
+                    () => {
+                        console.log("SUCCESS!");
+                        setIsLoading(false);
+                        setSuccessMsg("Boom! Your message just landed in my inbox.");
 
-                    setTimeout(() => {
-                        setSuccessMsg(null);
-                    }, 10000);
-                },
-                (error) => {
-                    console.log("FAILED...", error);
-                    setIsLoading(false);
-                }
-            );
+                        setTimeout(() => {
+                            setSuccessMsg(null);
+                        }, 10000);
+                    },
+                    (error) => {
+                        console.log("FAILED...", error);
+                        setIsLoading(false);
+                    }
+                );
+        }
     };
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    console.log('brief Section is in view!');
                     localStorage.setItem('viewState', componentsType?.contact);
                 }
             },
@@ -108,7 +113,7 @@ export default function Contact() {
                         <textarea
                             name="message"
                             required
-                            className="resize-none w-full py-2 text-sm text-[#3d155f] border-b border-[var(--input-color)] outline-none"
+                            className="resize-none w-full py-2 text-sm text-[#3d155f] border-b border-[var(--input-color)] outline-none h-[2.5rem]"
                             placeholder="Enter your message"></textarea>
                     </div>
 

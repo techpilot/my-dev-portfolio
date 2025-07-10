@@ -60,6 +60,8 @@ export default function Work() {
                             short_description={project.short_description}
                             tech={project.tech}
                             website={project.website}
+                            github={project?.github}
+                            description={project.description}
                         />
                     ))}
                 </Masonry>
@@ -71,14 +73,20 @@ export default function Work() {
                         <Image src={arrow_icon} alt="" className="w-7 mt-1"/>
                     </Link>
                     <div className="flex items-center gap-2">
-                        <Image onClick={() => window.open("https://www.linkedin.com/in/stephenngwu", "_blank")}
-                               src={linkedin_icon} alt=""
-                               className="cursor-pointer w-6 h-6 lg:h-8 -mt-1"/>
-                        <Image onClick={() => window.open("https://github.com/techpilot", "_blank")}
-                               src={github_icon} alt="" className="cursor-pointer w-6 h-6 lg:w-7 lg:h-7"/>
-                        <Image
-                            onClick={() => window.open("https://teams.live.com/l/invite/FEAbewk99kGbLP5AgE", "_blank")}
-                            src={teams_icon} alt="" className="cursor-pointer h-6 lg:h-8"/>
+                        <Link href={'https://www.linkedin.com/in/stephenngwu'} target="_blank">
+                            <Image
+                                src={linkedin_icon} alt=""
+                                className="cursor-pointer w-6 h-6 lg:h-8 -mt-1"
+                            />
+                        </Link>
+
+                        <Link href={'https://github.com/techpilot'} target="_blank">
+                            <Image src={github_icon} alt="" className="cursor-pointer w-6 h-6 lg:w-7 lg:h-7"/>
+                        </Link>
+
+                        <Link href={'https://teams.live.com/l/invite/FEAbewk99kGbLP5AgE'} target="_blank">
+                            <Image src={teams_icon} alt="" className="cursor-pointer h-6 lg:h-8"/>
+                        </Link>
                     </div>
                 </div>
             </div>

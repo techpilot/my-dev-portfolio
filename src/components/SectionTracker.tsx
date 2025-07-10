@@ -15,7 +15,7 @@ const SectionTracker: React.FC<SectionTrackerProps> = ({
                                                            sections,
                                                            threshold = 0.5
                                                        }) => {
-    const [, setCurrentSection] = useLocalStorage<SectionType>('currentSection', 'landing');
+    const [, setCurrentSection] = useLocalStorage('currentSection', 'landing');
     const observerRef = useRef<IntersectionObserver | null>(null);
 
     useEffect(() => {

@@ -1,37 +1,30 @@
 "use client"
 
 import {motion, AnimatePresence} from "framer-motion";
-import React, {Dispatch, SetStateAction, useEffect, useState} from "react";
-import {projects} from "@/components/utils/datae"
+import React, {Dispatch, SetStateAction, useEffect} from "react";
 import back_icon from "@/assets/icons/back_icon.svg"
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import Link from "next/link";
+
+type ProjectTypes = {
+    img: StaticImageData;
+    title: string;
+    short_description: string;
+    tech: string[];
+    website: string;
+    id: number;
+    github?: string;
+    description: string;
+}
 
 interface SideDrawerProps {
     isDrawerOpen: boolean;
     setIsDrawerOpen: Dispatch<SetStateAction<boolean>>;
+    project: ProjectTypes;
 }
 
-const SideDrawer: React.FC<SideDrawerProps> = ({isDrawerOpen, setIsDrawerOpen}) => {
-    const [project, setProject] = useState(projects[0])
-    let project_id: string | null = null;
-
-    if (window !== undefined) {
-        project_id = localStorage.getItem('project_id')
-    }
-
-    useEffect(() => {
-        if (project_id == null) {
-            localStorage.setItem('project_id', projects[0].id.toString())
-        }
-    }, [project_id]);
-
-    useEffect(() => {
-        const project = projects.filter(project => project.id.toString() == project_id)
-        setProject(project[0])
-    }, [project, setProject, project_id])
-
-    // disable body scroll when side drawer is on
+const SideDrawer: React.FC<SideDrawerProps> = ({isDrawerOpen, setIsDrawerOpen, project}) => {
+    // disable body scroll when the side drawer is on
     useEffect(() => {
         if (isDrawerOpen) {
             document.body.style.overflow = 'hidden';
@@ -39,7 +32,7 @@ const SideDrawer: React.FC<SideDrawerProps> = ({isDrawerOpen, setIsDrawerOpen}) 
             document.body.style.overflow = '';
         }
 
-        // Clean up on unmount
+        // Clean up on unmounting
         return () => {
             document.body.style.overflow = '';
         };

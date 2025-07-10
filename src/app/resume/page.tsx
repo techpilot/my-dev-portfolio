@@ -4,6 +4,7 @@ import {Poppins} from "next/font/google";
 import Image from "next/image";
 import linkedin from "@/assets/icons/linkedin_blue.svg"
 import download_icon from "@/assets/icons/download.svg"
+import Link from "next/link";
 
 const poppins = Poppins({
     variable: "--font-poppins",
@@ -38,13 +39,13 @@ export default function Resume() {
         }
     };
 
-
     return (
         <section id="resume" className="resume">
             <div className="container mx-auto my-[40px] p-4 md:p-[30px] bg-[var(--resume-bg)] relative">
                 <div className="flex items-center gap-4 absolute top-6 right-6">
-                    <Image onClick={() => window.open("https://www.linkedin.com/in/stephenngwu", "_blank")}
-                           src={linkedin} alt="" className="w-4 h-4 cursor-pointer"/>
+                    <Link href={'https://www.linkedin.com/in/stephenngwu'} target="_blank">
+                        <Image src={linkedin} alt="" className="w-4 h-4 cursor-pointer"/>
+                    </Link>
 
                     <div onClick={handleDownload} className="flex items-center gap-1 cursor-pointer">
                         <Image src={download_icon} alt="" className="w-4 h-4"/>

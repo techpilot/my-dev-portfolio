@@ -11,9 +11,20 @@ interface ProjectCardProps {
     tech: string[];
     website: string;
     id: number;
+    github?: string;
+    description: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({img, title, short_description, tech, id}) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+                                                     img,
+                                                     title,
+                                                     short_description,
+                                                     tech,
+                                                     id,
+                                                     github,
+                                                     description,
+                                                     website
+                                                 }) => {
     const [hovered, setHovered] = useState(false);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [isMobileScreen, setIsMobileScreen] = useState(false);
@@ -85,7 +96,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({img, title, short_description,
                     </div>)}
             </div>
 
-            <SideDrawer isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen}/>
+            <SideDrawer isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} project={{
+                img: img,
+                title: title,
+                short_description: short_description,
+                tech: tech,
+                id: id,
+                description: description,
+                github: github,
+                website: website
+            }}/>
         </>
     )
 }

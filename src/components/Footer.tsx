@@ -47,14 +47,17 @@ export default function Footer() {
                         <p className="text-sm lg:text-base">© Stephen Ngwu 2025</p>
 
                         <div className="flex items-center gap-2">
-                            <Image onClick={() => window.open("https://www.linkedin.com/in/stephenngwu", "_blank")}
-                                   src={linkedin_icon} alt=""
-                                   className="cursor-pointer w-6 h-6 lg:h-8 -mt-3 mr-2"/>
-                            <Image onClick={() => window.open("https://github.com/techpilot", "_blank")}
-                                   src={github_icon} alt="" className="cursor-pointer w-6 h-6 lg:w-8 lg:h-8"/>
-                            <Image
-                                onClick={() => window.open("https://teams.live.com/l/invite/FEAbewk99kGbLP5AgE", "_blank")}
-                                src={teams_icon} alt="" className="cursor-pointer h-6 lg:h-8 -mt-2"/>
+                            <Link href={`https://www.linkedin.com/in/stephenngwu`} target='_blank'>
+                                <Image src={linkedin_icon} alt="" className="cursor-pointer w-6 h-6 lg:h-8 -mt-3 mr-2"/>
+                            </Link>
+                            
+                            <Link href={`https://github.com/techpilot`} target='_blank'>
+                                <Image src={github_icon} alt="" className="cursor-pointer w-6 h-6 lg:w-8 lg:h-8"/>
+                            </Link>
+
+                            <Link href={'https://teams.live.com/l/invite/FEAbewk99kGbLP5AgE'} target='_blank'>
+                                <Image src={teams_icon} alt="" className="cursor-pointer h-6 lg:h-8 -mt-2"/>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -1,22 +1,27 @@
 'use client';
 
 import Image from "next/image";
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import DropDown from "@/components/DropDown";
 import {useLocalStorage} from "@/hooks/useLocalStorage";
 
 export default function Header() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [currentSection] = useLocalStorage('viewState', 'landing');
+    const [isMobileScreen, setIsMobileScreen] = useState(false);
 
+    useEffect(() => {
+        function isMobileUserAgent() {
+            const userAgent = navigator.userAgent || navigator.vendor
+            const mobileRegex = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mobi|palm( os)?|phone|p(ixi|rim)|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i;
+            const tabletRegex = /android|ipad|playbook|silk/i;
 
-    function isMobileUserAgent() {
-        const userAgent = navigator.userAgent || navigator.vendor
-        const mobileRegex = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mobi|palm( os)?|phone|p(ixi|rim)|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i;
-        const tabletRegex = /android|ipad|playbook|silk/i;
+            return mobileRegex.test(userAgent) || tabletRegex.test(userAgent);
+        }
 
-        return mobileRegex.test(userAgent) || tabletRegex.test(userAgent);
-    }
+        setIsMobileScreen(isMobileUserAgent())
+    }, [])
+
 
     const getLogo = (): string => {
         // for logo
@@ -39,7 +44,7 @@ export default function Header() {
     const getNav = (): string => {
         switch (currentSection) {
             case 'landing':
-                if (isMobileUserAgent()) {
+                if (isMobileScreen) {
                     return '/nav_sec.svg';
                 }
                 return '/nav_pri.svg';

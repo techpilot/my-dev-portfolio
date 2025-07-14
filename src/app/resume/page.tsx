@@ -41,7 +41,7 @@ export default function Resume() {
 
     return (
         <section id="resume" className="resume">
-            <div className="container mx-auto my-[40px] p-4 md:p-[30px] bg-[var(--resume-bg)] relative">
+            <div className="container mx-auto md:my-[40px] p-4 md:p-[30px] bg-[var(--resume-bg)] relative">
                 <div className="flex items-center gap-4 absolute top-6 right-6">
                     <Link href={'https://www.linkedin.com/in/stephenngwu'} target="_blank">
                         <Image src={linkedin} alt="" className="w-4 h-4 cursor-pointer"/>
@@ -52,7 +52,7 @@ export default function Resume() {
                         <p className="text-sm text-[var(--pri-text)]">Download</p>
                     </div>
                 </div>
-                <div className="p-10">
+                <div className="lg:px-10 py-10">
                     <p className="text-6xl font-extrabold text-[var(--primary)]">Stephen<br/> Ngwu</p>
                     <p className="text-lg lg:text-xl text-[var(--pri-text)] font-medium mt-4">Expert Frontend developer
                         and Cybersecurity enthusiast.</p>

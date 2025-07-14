@@ -35,7 +35,7 @@ export const projects = [
         title: "StarkWager",
         description: "Starknet ID protocol is an open source interface for the decentralized identity protocol Starknet id",
         tech: ["React", "TypeScript"],
-        website: "https://andromedia.cc",
+        website: "",
         short_description: "An open source interface for the decentralized identity protocol Starknet ID",
         category: ["open-source", "web3"],
         github: "https://github.com/techpilot/affiliate.starknet.id.git"
@@ -46,7 +46,7 @@ export const projects = [
         title: "Scaffold Stellar",
         description: "Scaffold Stellar is a cutting-edge project template designed to provide developers with a robust, high-performance starting point for full-stack applications. By combining the power of Next.js and Rust, this scaffold offers an optimized development experience with modern web technologies.",
         tech: ["React", "TypeScript", "Rust", "Stellar Blockchain"],
-        website: "https://app.pininterest.com",
+        website: "",
         short_description: "A cutting-edge project template designed to provide developers with a starting point for full-stack applications",
         category: ["open-source", "web3"],
         github: "https://github.com/ScaffoldRust/SRust-Basic-Stellar-nextjs-pnpm.git"
@@ -79,7 +79,8 @@ export const projects = [
         tech: ["React", "TypeScript", "Web3", "Ethereum", "Solidity"],
         website: "https://crypto-rivulet.vercel.app",
         short_description: "A crypto transfer and swap platform",
-        category: ["web3"]
+        category: ["web3"],
+        github: "https://github.com/techpilot/uniswap-blockchain.git"
     },
     {
         id: 8,

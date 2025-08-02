@@ -7,6 +7,7 @@ import zigzag_pri from "@/assets/svgs/zigzag_pri.svg";
 import pri_dotted from "@/assets/svgs/pri_dotted.svg";
 import {componentsType} from "@/components/utils/datae";
 import {useLocalStorage} from "@/hooks/useLocalStorage";
+import acclaim_badge from "@/assets/images/acclaim_badge.png"
 
 export default function DesEng() {
     const desRef = useRef(null);
@@ -56,7 +57,6 @@ export default function DesEng() {
                     </div>
                 </div>
 
-
                 <div className="relative h-full md:w-[50%] flex flex-col justify-end">
                     <h2 className="text-4xl md:text-3xl lg:text-6xl font-bold lg:leading-16 text-[var(--primary)]">Security</h2>
                     <p className="text-sm lg:text-base mt-4 text-[var(--pri-text)]">Being a professional software
@@ -76,6 +76,8 @@ export default function DesEng() {
                     <div className="hidden lg:block absolute top-[17%] right-[20%]">
                         <Image src={pri_dotted} alt="" className="w-[120px] h-[100px]"/>
                     </div>
+                    <Image src={acclaim_badge} alt=""
+                           className="hidden md:block absolute top-[15%] lg:top-[13%] right-[5%] lg:right-[21%] w-[110px] h-[130px]"/>
                 </div>
             </div>
         </div>

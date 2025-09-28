@@ -23,7 +23,7 @@ export const projects = [
         id: 2,
         img: spox_img,
         title: "SPOX",
-        description: "SPOX is a mobile application that allows users to track their daily workouts and view their progress over time. It also allows users to create workouts and share them with friends.",
+        description: "SPOX is transforming how fans engage with the sports they love by providing fans a platform to trade their favorite sports tokens and make profits.",
         tech: ["Angular", "TypeScript", "Node.js", "Nest.js", "PostgreSQL", "Socket.io", "Redis", "CI/CD"],
         website: "https://app.spox.trading",
         short_description: "A trading platform where users can trade sports tokens",

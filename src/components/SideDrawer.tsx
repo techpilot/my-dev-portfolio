@@ -65,7 +65,9 @@ const SideDrawer: React.FC<SideDrawerProps> = ({isDrawerOpen, setIsDrawerOpen, p
                                     </div>
 
                                     <Image
-                                        src={project?.img} alt=""
+                                        src={project?.img}
+                                        alt={project?.title}
+                                        placeholder="blur"
                                         className="rounded-lg h-[300px] w-full object-cover shadow-md"
                                     />
 

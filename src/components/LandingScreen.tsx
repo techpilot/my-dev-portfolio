@@ -42,7 +42,8 @@ export default function LandingScreen() {
             {/*center image*/}
             <div
                 className="hidden md:block absolute top-[18%] lg:top-[21%] left-[54%] lg:left-[55%] w-full h-full md:z-40">
-                <Image src={profile_img} alt="" className="h-[230px] lg:h-[370px] w-[220px] lg:w-[350px] object-cover"/>
+                <Image src={profile_img} alt="Stephen" placeholder="blur"
+                       className="h-[230px] lg:h-[370px] w-[220px] lg:w-[350px] object-cover"/>
             </div>
 
             <div

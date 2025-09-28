@@ -50,7 +50,7 @@ export default function Footer() {
                             <Link href={`https://www.linkedin.com/in/stephenngwu`} target='_blank'>
                                 <Image src={linkedin_icon} alt="" className="cursor-pointer w-6 h-6 lg:h-8 -mt-3 mr-2"/>
                             </Link>
-                            
+
                             <Link href={`https://github.com/techpilot`} target='_blank'>
                                 <Image src={github_icon} alt="" className="cursor-pointer w-6 h-6 lg:w-8 lg:h-8"/>
                             </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
 
                             <div
                                 className="h-16 lg:h-20 w-16 lg:w-20 rounded-full bg-[#ffffff14] p-0.5 flex justify-center items-center">
-                                <Image src={juve} alt=""
+                                <Image src={juve} alt="juventus" placeholder="blur"
                                        className="rounded-full h-14 lg:h-18 w-14 lg:w-18 object-cover"/>
                             </div>
                         </div>
@@ -100,7 +100,7 @@ export default function Footer() {
 
                                 <div
                                     className="h-16 lg:h-20 w-16 lg:w-20 rounded-full bg-[#ffffff14] p-0.5 flex justify-center items-center">
-                                    <Image src={donny} alt=""
+                                    <Image src={donny} alt="donny" placeholder="blur"
                                            className="rounded-full h-14 lg:h-18 w-14 lg:w-18"/>
                                 </div>
                             </div>
@@ -121,7 +121,7 @@ export default function Footer() {
 
                                 <div
                                     className="h-16 lg:h-20 w-16 lg:w-20 rounded-full bg-[#ffffff14] p-0.5 flex justify-center items-center">
-                                    <Image src={evans} alt=""
+                                    <Image src={evans} alt="evans" placeholder="blur"
                                            className="rounded-full h-14 lg:h-18 w-14 lg:w-18"/>
                                 </div>
                             </div>

@@ -37,10 +37,11 @@ export default function Brief() {
             <div
                 className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-32 px-12 md:px-14 lg:px-28 xl:px-36 w-full md:h-full">
                 <div className="w-full md:w-[37%]">
-                    <h2 className="text-[var(--secondary)] text-4xl md:text-3xl lg:text-6xl font-extrabold lg:leading-16">Over
-                        the years</h2>
+                    <h2 className="text-[var(--secondary)] text-4xl md:text-3xl lg:text-5xl xl:text-6xl font-extrabold xl:leading-16">
+                        Over the years
+                    </h2>
 
-                    <p className="text-white text-sm md:text-xs lg:text-[0.95rem] mt-7">I&#39;ve built products for
+                    <p className="text-white text-sm md:text-xs xl:text-[0.95rem] mt-7">I&#39;ve built products for
                         companies
                         and
                         businesses around the globe ranging from e-commerce websites to complex solutions and enterprise

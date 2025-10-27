@@ -38,9 +38,9 @@ export default function DesEng() {
     return (
         <div ref={desRef} className="snap-start w-full lg:h-screen pt-76 pb-14 md:pt-20 lg:pt-52 lg:pb-0">
             <div
-                className="flex flex-col md:flex-row justify-between gap-10 md:gap-32 px-12 md:px-14 lg:px-28 xl:px-36 w-full md:h-[350px]">
+                className="flex flex-col md:flex-row justify-between gap-10 md:gap-32 px-12 md:px-14 lg:px-28 xl:px-36 w-full md:h-[380px]">
                 <div className="relative h-full md:w-[50%] z-40">
-                    <p className="text-4xl md:text-3xl lg:text-6xl font-bold lg:leading-16 text-[var(--primary)]">Engineering</p>
+                    <h2 className="text-4xl md:text-3xl xl:text-6xl font-bold lg:leading-16 text-[var(--primary)]">Engineering</h2>
                     <p className="text-sm lg:text-base mt-4 text-[var(--pri-text)]">In building applications, I&#39;m
                         equipped with just the right tools, and can absolutely function independently of them to deliver
                         fast, resilient solutions designed for scale — performance and scalability are a priority for
@@ -58,14 +58,12 @@ export default function DesEng() {
                 </div>
 
                 <div className="relative h-full md:w-[50%] flex flex-col justify-end">
-                    <h2 className="text-4xl md:text-3xl lg:text-6xl font-bold lg:leading-16 text-[var(--primary)]">Security</h2>
-                    <p className="text-sm lg:text-base mt-4 text-[var(--pri-text)]">Being a professional software
-                        developer,
-                        I
-                        apply
-                        cybersecurity best practices at every stage of development. From securing APIs using JWT and
-                        OAuth2 to avoiding common vulnerabilities (XSS, SQL injection, CSRF), I create applications with
-                        security in mind and I bring a strong security outlook to every project.
+                    <h2 className="text-4xl md:text-3xl xl:text-6xl font-bold lg:leading-16 text-[var(--primary)] z-40">Security</h2>
+                    <p className="text-sm lg:text-base mt-4 text-[var(--pri-text)]">As a professional software
+                        developer, I apply cybersecurity best practices at every stage of the development process. From
+                        securing APIs using JWT and OAuth2, performing SAST and DAST vulnerability tests using SNYK and
+                        OWASP ZAP, to mitigating common vulnerabilities (XSS, SQL injection, CSRF), I create
+                        applications with security in mind, bringing a strong security mindset to every project.
                     </p>
 
                     {/*right side absolutes*/}
@@ -73,11 +71,13 @@ export default function DesEng() {
                         <Image src={bullet_pri} alt="" className="h-[10px]"/>
                     </div>
 
-                    <div className="hidden lg:block absolute top-[17%] right-[20%]">
+                    <div className="hidden xl:block absolute top-[17%] right-[20%] lg:right-[4%] xl:right-[20%]">
                         <Image src={pri_dotted} alt="" className="w-[120px] h-[100px]"/>
                     </div>
-                    <Image src={acclaim_badge} alt=""
-                           className="hidden md:block absolute top-[15%] lg:top-[13%] right-[5%] lg:right-[21%] w-[110px] h-[130px]"/>
+                    <Image
+                        src={acclaim_badge} alt=""
+                        className="hidden md:block absolute top-[15%] lg:top-[13%] right-[5%] lg:right-[3%] xl:right-[21%] w-[110px] h-[130px] lg:w-[70px] lg:h-[90px] xl:w-[110px] xl:h-[130px]"
+                    />
                 </div>
             </div>
         </div>

@@ -18,7 +18,7 @@ export default function WhatIDo() {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    console.log('brief Section is in view!');
+                    // console.log('brief Section is in view!');
                     localStorage.setItem('viewState', componentsType?.what);
                     setValue(componentsType?.contact)
                 }

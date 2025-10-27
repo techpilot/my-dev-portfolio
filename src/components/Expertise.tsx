@@ -18,7 +18,6 @@ export default function Expertise() {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    console.log('brief Section is in view!');
                     localStorage.setItem('viewState', componentsType?.expertise);
                     setValue(componentsType?.expertise)
                 }

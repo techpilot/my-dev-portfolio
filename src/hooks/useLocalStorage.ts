@@ -23,7 +23,7 @@ export function useLocalStorage(key: string, defaultValue: string): [string, (va
                 const stored = localStorage.getItem('viewState');
                 return stored ? stored : defaultValue;
             } catch (error) {
-                console.error(`Error parsing localStorage value for key "${key}":`, error);
+                console.error(`Error parsing localStorage value for key:`, error);
                 return defaultValue;
             }
         }
@@ -35,10 +35,10 @@ export function useLocalStorage(key: string, defaultValue: string): [string, (va
             if (e.key === key) {
                 try {
                     const newValue = e.newValue ? e.newValue : defaultValue;
-                    console.log('newValue', newValue);
+                    // console.log('newValue', newValue);
                     setValue(newValue);
                 } catch (error) {
-                    console.error(`Error parsing storage event value for key "${key}":`, error);
+                    console.error(`Error parsing storage event value for key:`, error);
                     setValue(defaultValue);
                 }
             }
@@ -73,7 +73,7 @@ export function useLocalStorage(key: string, defaultValue: string): [string, (va
                 detail: {key, newValue}
             }));
         } catch (error) {
-            console.error(`Error setting localStorage value for key "${key}":`, error);
+            console.error(`Error setting localStorage value for key:`, error);
         }
     };
 

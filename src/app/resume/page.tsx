@@ -53,22 +53,29 @@ export default function Resume() {
                     </div>
                 </div>
                 <div className="lg:px-10 py-10">
-                    <p className="text-6xl font-extrabold text-[var(--primary)]">Stephen<br/> Ngwu</p>
-                    <p className="text-lg lg:text-xl text-[var(--pri-text)] font-medium mt-4">Expert Frontend developer
-                        and Cybersecurity enthusiast.</p>
+                    <p className="text-5xl font-extrabold text-[var(--primary)]">Stephen Ngwu</p>
+                    <p className="text-base lg:text-lg text-[var(--pri-text)] font-medium mt-2">Frontend Engineer |
+                        Cybersecurity Analyst</p>
                 </div>
                 <div className="flex flex-wrap -mx-4 w-full">
                     <div className="w-full lg:w-1/2 px-4">
                         <h3 className="text-[26px] font-bold mt-5 mb-5 text-[var(--pri-text)]">Sumary</h3>
                         <div className="relative before:content-[''] before:absolute before:w-4 before:h-4 before:rounded-full before:left-[-9px] before:top-0 before:bg-[var(--primary)] before:border-2 before:border-[var(--primary)]
                         pt-0 pr-0 pb-5 md:pb-7 pl-5 md:pl-8 -mt-0.5 border-l-2 border-black/80">
-                            <h4 className="text-[18px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">
+                            <h4 className="text-[16px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">
                                 Stephen Ngwu
                             </h4>
                             <p>
                                 <ul className="list-disc list-outside flex flex-col gap-1">
-                                    <li className="text-[var(--pri-text)]">Enugu, Nigeria</li>
+                                    <li className="text-[var(--pri-text)]">Nigeria</li>
                                     <li className="text-[var(--pri-text)]">ngwustephen99@gmail.com</li>
+                                    <li className="text-[var(--pri-text)]">
+                                        <a href="https://github.com/techpilot"
+                                           target="_blank"
+                                           className="no-underline text-[var(--resume-link)]">
+                                            https://github.com/techpilot
+                                        </a>
+                                    </li>
                                 </ul>
                             </p>
                         </div>
@@ -76,7 +83,7 @@ export default function Resume() {
                         <h3 className="text-[26px] font-bold mt-5 mb-5 text-[var(--pri-text)]">Education</h3>
                         <div className="relative before:content-[''] before:absolute before:w-4 before:h-4 before:rounded-full before:left-[-9px] before:top-0 before:bg-[var(--primary)] before:border-2 before:border-[var(--primary)]
                         pt-0 pr-0 pb-5 md:pb-7 pl-5 md:pl-8 -mt-0.5 border-l-2 border-black/80">
-                            <h4 className="text-[18px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">Bachelor
+                            <h4 className="text-[16px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">Bachelor
                                 of Computer Science and Mathematics</h4>
                             <h5 className="text-[var(--pri-text)]">2017 - 2021</h5>
                             <p className="text-[var(--pri-text)]"><em>University of Nigeria Nsukka</em></p>
@@ -88,36 +95,28 @@ export default function Resume() {
                         pt-0 pr-0 pb-5 md:pb-7 pl-5 md:pl-8 -mt-0.5 border-l-2 border-black/80">
                             <ul className="list-disc list-outside flex flex-col gap-1">
                                 <li className="text-[var(--pri-text)]">
-                                    <strong>Programming Languages</strong>: JavaScript, Typescript, Python,
-                                    Solidity,HTML5, CSS3
+                                    <strong>Languages and Frameworks:</strong> Python, JavaScript, Typescript, Java,
+                                    Solidity, PowerShell, Angular, ReactJS, Vue3,
+                                    NodeJS
                                 </li>
-                                <li className="text-[var(--pri-text)]">
-                                    <strong>Frameworks</strong>: ReactJS, NextJS, Angular, Vue3, NodeJS, ExpressJS,
-                                    NestJS, Tailwind CSS, Styled Components, Redux, Context API
+                                <li className="text-[var(--pri-text)]"><strong>Technologies and Tools:</strong> JSON,
+                                    Docker, Cloud Storage, Virtual Machines, SQL, VirusTotal, Splunk
                                 </li>
-                                <li className="text-[var(--pri-text)]"><strong>APIS</strong>: REST APIs</li>
-                                <li className="text-[var(--pri-text)]"><strong>Cloud</strong>: Google Cloud, Mapbox,
-                                    Stripe
-                                </li>
-                                <li className="text-[var(--pri-text)]">
-                                    <strong>Tools</strong>: WebRTC, Socket.io, Git, GitHub, Postman, Twilio, Firebase,
-                                    JWT,
-                                    Webpack, Babel, CRA, Vite, Docker, React Hooks, Ethers, Hardhat, Jira,
-                                    Asana, Trello
+                                <li className="text-[var(--pri-text)]"><strong>Platforms:</strong> Google Cloud
+                                    Platform, Mapbox, Stripe, WebRTC, Socket.io, Postman, Version Control (Git)
                                 </li>
                                 <li className="text-[var(--pri-text)]">
                                     <strong>Paradigms</strong>: REST API Architecture, Agile Software Development,
-                                    Microservices, CICD
+                                    Microservices, CI/CD
                                 </li>
-                                <li className="text-[var(--pri-text)]"><strong>Database</strong>: PostgreSQL, MySQL,
+                                <li className="text-[var(--pri-text)]"><strong>Database:</strong> PostgreSQL, MySQL,
                                     MongoDB, Firestore, JSON
                                 </li>
-                                <li className="text-[var(--pri-text)]"><strong>Hosting</strong>: Vercel, Netlify,
-                                    Namecheap
+                                <li className="text-[var(--pri-text)]"><strong>Security:</strong> Unit testing, Threat
+                                    Modelling, Code Review, SAST, DAST, SCA, IAM, SIEM/SOAR
                                 </li>
                                 <li className="text-[var(--pri-text)]">
-                                    <strong>Soft Skills</strong>: Communication, Scheduling, Flexibility, Leadership,
-                                    Management
+                                    <strong>Others:</strong> Network Security, Operating System (Linux & Windows)
                                 </li>
                             </ul>
                         </div>
@@ -126,33 +125,91 @@ export default function Resume() {
                     {/*experience section*/}
                     <div className="w-full lg:w-1/2 px-4">
                         <h3 className="text-[26px] font-bold mt-5 mb-5 text-[var(--pri-text)]">
-                            Professional Experience</h3>
+                            Professional Experience
+                        </h3>
+
+                        {/*SBINARY*/}
                         <div className="relative before:content-[''] before:absolute before:w-4 before:h-4 before:rounded-full before:left-[-9px] before:top-0 before:bg-[var(--primary)] before:border-2 before:border-[var(--primary)]
                         pt-0 pr-0 pb-5 md:pb-7 pl-5 md:pl-8 -mt-0.5 border-l-2 border-black/80">
-                            <h4 className="text-[18px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">Front-End
-                                Developer</h4>
-                            <h5 className={`bg-[#00000026] py-1 px-3 font-bold ${poppins.variable} max-w-max`}>
-                                Nov 2023 - Present
+                            <h4 className="text-[16px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">
+                                Software Engineer
+                            </h4>
+                            <h5 className={`text-[14px] bg-[#00000026] py-1 px-3 font-bold ${poppins.variable} max-w-max`}>
+                                Jul 2024 - Present
+                            </h5>
+                            <p className="text-[var(--pri-text)] my-1 font-medium"><em>Spordis Binary</em></p>
+                            <p>
+                                <ul className="list-disc list-outside flex flex-col gap-1">
+                                    <li className="text-[var(--pri-text)]">Implemented a Shift Left approach by
+                                        integrating threat modeling, SAST (Snyk), and DAST (Nikto, OWASP ZAP)
+                                        while hardening CI/CD pipelines, ensuring secure deployments and reducing
+                                        critical vulnerabilities by 45%
+                                    </li>
+                                    <li className="text-[var(--pri-text)]">Implemented API-driven LLM integrations using
+                                        JavaScript and TypeScript to enable real-time interaction, parsing,
+                                        and response evaluation.
+                                    </li>
+                                    <li className="text-[var(--pri-text)]">Built and optimized JSON prompt structures
+                                        for multi-step AI agents, enhancing decision-making accuracy and
+                                        performance evaluation for real-time sports token live charts.
+                                    </li>
+                                    <li className="text-[var(--pri-text)]">Designed and tested APIs against OWASP API
+                                        Security Top 10 using Postman, ensuring robust authentication,
+                                        authorization, and input validation aligned with industry best standards.
+                                    </li>
+                                    <li className="text-[var(--pri-text)]">Boosted team performance by 25% by
+                                        integrating security best practices into agile workflows, mentoring developers
+                                        on secure coding, and leveraging GitHub Actions to reduce vulnerabilities.
+                                    </li>
+                                </ul>
+                            </p>
+
+                            <br/>
+                            <strong className="text-[var(--pri-text)]">Projects</strong>
+                            <p>
+                                <ul className="list-disc list-outside flex flex-col gap-1">
+                                    <li className="text-[var(--pri-text)]">
+                                        <a href="https://global.spox.trading"
+                                           target="_blank"
+                                           className="no-underline text-[var(--resume-link)]">SPOX</a>:
+                                        Designed and engineered a robust trading platform with seamless interoperability
+                                        between front-end and back-end systems.
+                                        Additionally, I worked closely with designers and engineers and reported to
+                                        stakeholders to ensure unified development, smooth workflows, and high
+                                        usability.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+
+                        {/*C-SUNSHINE*/}
+                        <div className="relative before:content-[''] before:absolute before:w-4 before:h-4 before:rounded-full before:left-[-9px] before:top-0 before:bg-[var(--primary)] before:border-2 before:border-[var(--primary)]
+                        pt-0 pr-0 pb-5 md:pb-7 pl-5 md:pl-8 -mt-0.5 border-l-2 border-black/80">
+                            <h4 className="text-[16px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">Front-End
+                                Engineer</h4>
+                            <h5 className={`text-[14px] bg-[#00000026] py-1 px-3 font-bold ${poppins.variable} max-w-max`}>
+                                Nov 2023 - Jul 2024
                             </h5>
                             <p className="text-[var(--pri-text)] my-1 font-medium"><em>C-Sunshine, Bratislava,
                                 Slovakia </em></p>
                             <p>
                                 <ul className="list-disc list-outside flex flex-col gap-1">
-                                    <li className="text-[var(--pri-text)]">Boosted revenue and slashed development
-                                        expenses by 20% through
-                                        the deployment of a dynamic, real-time medical check-up chart.
+                                    <li className="text-[var(--pri-text)]">Increased revenue and slashed development
+                                        expenses by 20% through the deployment of a dynamic, real-time
+                                        medical check-up chart.
                                     </li>
                                     <li className="text-[var(--pri-text)]">
-                                        Enhanced user engagement and feedback by 15% by integrating a robust survey
-                                        feature.
+                                        Boosted user engagement by 15% by engineering a JSON-based survey module that
+                                        automated response handling,
+                                        improved UX, and streamlined feedback analytics.
                                     </li>
                                     <li className="text-[var(--pri-text)]">Leveraged Test Driven Development to optimize
-                                        web pages for peak
-                                        performance and scalability.
+                                        web pages for peak performance and scalability.
                                     </li>
                                 </ul>
                             </p>
 
+                            <br/>
                             <strong className="text-[var(--pri-text)]">Projects</strong>
                             <p>
                                 <ul className="list-disc list-outside flex flex-col gap-1">
@@ -166,32 +223,40 @@ export default function Resume() {
                                 </ul>
                             </p>
                         </div>
+
+                        {/*NANOCODES*/}
                         <div className="relative before:content-[''] before:absolute before:w-4 before:h-4 before:rounded-full before:left-[-9px] before:top-0 before:bg-[var(--primary)] before:border-2 before:border-[var(--primary)]
                         pt-0 pr-0 pb-5 md:pb-7 pl-5 md:pl-8 -mt-0.5 border-l-2 border-black/80">
-                            <h4 className="text-[18px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">Lead
-                                Front-end Developer</h4>
-                            <h5 className={`bg-[#00000026] py-1 px-3 font-bold ${poppins.variable} max-w-max`}>Jan 2023
+                            <h4 className="text-[16px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">Lead
+                                Front-end Engineer</h4>
+                            <h5 className={`text-[14px] bg-[#00000026] py-1 px-3 font-bold ${poppins.variable} max-w-max`}>Jan
+                                2023
                                 - Feb 2024</h5>
                             <p className="text-[var(--pri-text)] my-1 font-medium"><em>Nanocodes
                                 Programming</em></p>
                             <p>
                                 <ul className="list-disc list-outside flex flex-col gap-1">
-                                    <li className="text-[var(--pri-text)]">Spearheaded a skilled development team in
-                                        crafting scalable software
-                                        solutions, leveraging top-tier project management methodologies to
-                                        align with industry benchmarks.
+                                    <li className="text-[var(--pri-text)]">Led the design and optimization of dynamic
+                                        frontend workflows using JSON-based configuration schemas,
+                                        improving user interaction, system responsiveness, and overall task execution
+                                        efficiency across applications.
                                     </li>
-                                    <li className="text-[var(--pri-text)]">Drove a 25% surge in customer engagement by
-                                        leading the creation of
-                                        an intuitive customer service platform.
+                                    <li className="text-[var(--pri-text)]">Drove a 25% increase in customer engagement
+                                        by leading the development of an intuitive, high-performing customer
+                                        service platform.
                                     </li>
-                                    <li className="text-[var(--pri-text)]">Catalyzed a 14% uplift in revenue through the
-                                        strategic development of a
-                                        robust, industry-standard e-commerce website.
+                                    <li className="text-[var(--pri-text)]">Catalyzed a 14% revenue uplift by
+                                        architecting and delivering a robust, industry-compliant e-commerce solution
+                                        aligned with business goals.
+                                    </li>
+                                    <li className="text-[var(--pri-text)]">Engineered the front-end architecture for
+                                        Andromedia’s live chat application, delivering a user experience
+                                        comparable to industry leaders like Tidio Chat.
                                     </li>
                                 </ul>
                             </p>
 
+                            <br/>
                             <strong>Projects</strong>
                             <p>
                                 <ul className="list-disc list-outside flex flex-col gap-1">
@@ -214,11 +279,14 @@ export default function Resume() {
                                 </ul>
                             </p>
                         </div>
+
+                        {/*DREAM HUNTERS*/}
                         <div className="relative before:content-[''] before:absolute before:w-4 before:h-4 before:rounded-full before:left-[-9px] before:top-0 before:bg-[var(--primary)] before:border-2 before:border-[var(--primary)]
                         pt-0 pr-0 pb-5 md:pb-7 pl-5 md:pl-8 -mt-0.5 border-l-2 border-black/80">
-                            <h4 className="text-[18px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">Front-end
+                            <h4 className="text-[16px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">Front-end
                                 Developer</h4>
-                            <h5 className={`bg-[#00000026] py-1 px-3 font-bold ${poppins.variable} max-w-max`}>Oct 2022
+                            <h5 className={`text-[14px] bg-[#00000026] py-1 px-3 font-bold ${poppins.variable} max-w-max`}>Oct
+                                2022
                                 - Jan 2023</h5>
                             <p className="my-1"><em>Dream Hunters DAO, Naples, Italy</em></p>
                             <p>
@@ -238,32 +306,41 @@ export default function Resume() {
                                 </ul>
                             </p>
                         </div>
+
+                        {/*WHATIDO*/}
                         <div className="relative before:content-[''] before:absolute before:w-4 before:h-4 before:rounded-full before:left-[-9px] before:top-0 before:bg-[var(--primary)] before:border-2 before:border-[var(--primary)]
                         pt-0 pr-0 pb-5 pl-5 md:pl-8 -mt-0.5 border-l-2 border-black/80">
-                            <h4 className="text-[18px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">Full
+                            <h4 className="text-[16px] leading-[18px] font-semibold uppercase text-[var(--primary)] mb-2.5">Full
                                 Stack Engineer</h4>
-                            <h5 className={`bg-[#00000026] py-1 px-3 font-bold ${poppins.variable} max-w-max`}>Aug 2021
+                            <h5 className={`text-[14px] bg-[#00000026] py-1 px-3 font-bold ${poppins.variable} max-w-max`}>Aug
+                                2021
                                 - Oct 2022</h5>
                             <p className="text-[var(--pri-text)] my-1"><em>Global Network LLC, Avondale, United
                                 States</em>
                             </p>
                             <p>
                                 <ul className="list-disc list-outside flex flex-col gap-1">
-                                    <li className="text-[var(--pri-text)]">Enhanced payment efficiency and slashed costs
-                                        by 35% via the
-                                        development of an Ethereum-based smart contract system.
+                                    <li className="text-[var(--pri-text)]">Optimized payment processes and reduced
+                                        operational costs by 35% through the development and deployment of
+                                        an Ethereum-based smart contract solution.
                                     </li>
-                                    <li className="text-[var(--pri-text)]">Boosted user engagement by 15% by deploying
-                                        personalized, real-time
-                                        email and push notification strategies.
+                                    <li className="text-[var(--pri-text)]">Integrated Paystack and Stripe payment
+                                        gateways to enable seamless, secure, and multi-currency transactions,
+                                        resulting in a 30% increase in successful payments and improved overall user
+                                        trust and conversion rates.
                                     </li>
-                                    <li className="text-[var(--pri-text)]">Elevated user experience and engagement by
-                                        20% with the integration
-                                        of an Elasticsearch functionality.
+                                    <li className="text-[var(--pri-text)]">Increased user engagement by 15% through the
+                                        implementation of personalized, real-time email and push
+                                        notification campaigns.
+                                    </li>
+                                    <li className="text-[var(--pri-text)]">Enhanced user experience and increased
+                                        engagement by 20% through the integration of advanced Elasticsearch
+                                        functionality.
                                     </li>
                                 </ul>
                             </p>
 
+                            <br/>
                             <strong className="text-[var(--pri-text)]">Projects</strong>
                             <p>
                                 <ul className="list-disc list-outside flex flex-col gap-1">

@@ -62,6 +62,7 @@ export default function Work() {
                             website={project.website}
                             github={project?.github}
                             description={project.description}
+                            case_study={project?.case_study}
                         />
                     ))}
                 </Masonry>

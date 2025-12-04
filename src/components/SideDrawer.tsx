@@ -5,6 +5,7 @@ import React, {Dispatch, SetStateAction, useEffect} from "react";
 import back_icon from "@/assets/icons/back_icon.svg"
 import Image, {StaticImageData} from "next/image";
 import Link from "next/link";
+import {ExternalLink} from "lucide-react";
 
 type ProjectTypes = {
     img: StaticImageData;
@@ -15,6 +16,7 @@ type ProjectTypes = {
     id: number;
     github?: string;
     description: string;
+    case_study?: string;
 }
 
 interface SideDrawerProps {
@@ -108,6 +110,20 @@ const SideDrawer: React.FC<SideDrawerProps> = ({isDrawerOpen, setIsDrawerOpen, p
                                             </Link>
 
                                         </p>
+                                    </div>}
+
+                                    {project?.case_study && <div className="mt-3 md:mt-5">
+                                        <Link
+                                            href={project?.case_study}
+                                            style={{color: '#0067decc'}}
+                                            className="rounded-full font-semibold flex items-center text-sm"
+                                        >
+                                            Case Study
+                                            <ExternalLink
+                                                className="w-4 h-4 ml-1"
+                                                style={{color: '#0067decc'}}
+                                            />
+                                        </Link>
                                     </div>}
                                 </div>
                             </div>

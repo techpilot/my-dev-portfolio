@@ -27,7 +27,8 @@ export const projects = [
         tech: ["Angular", "TypeScript", "Node.js", "Nest.js", "PostgreSQL", "Socket.io", "Redis", "CI/CD"],
         website: "https://app.spox.trading",
         short_description: "A trading platform where users can trade sports tokens",
-        category: ["web"]
+        category: ["web"],
+        case_study: "spox"
     },
     {
         id: 3,

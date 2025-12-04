@@ -13,6 +13,7 @@ interface ProjectCardProps {
     id: number;
     github?: string;
     description: string;
+    case_study?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> =
@@ -24,7 +25,8 @@ const ProjectCard: React.FC<ProjectCardProps> =
          id,
          github,
          description,
-         website
+         website,
+         case_study,
      }) => {
         const [hovered, setHovered] = useState(false);
         const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -107,7 +109,8 @@ const ProjectCard: React.FC<ProjectCardProps> =
                     id: id,
                     description: description,
                     github: github,
-                    website: website
+                    website: website,
+                    case_study: case_study
                 }}/>
             </>
         )

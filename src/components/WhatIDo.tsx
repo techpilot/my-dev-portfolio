@@ -51,7 +51,7 @@ export default function WhatIDo() {
                     <button
                         onMouseOver={() => setBtnHover(true)}
                         onMouseOut={() => setBtnHover(false)}
-                        onClick={() => router.push('/work')}
+                        onClick={() => router.push('/spox')}
                         className="relative overflow-hidden px-6 py-3 text-[var(--primary)] font-semibold bg-white group flex items-center justify-center gap-5 p-3 border border-[var(--primary)] lg:w-[60%] cursor-pointer mt-5">
                         <span
                             className="absolute inset-0 w-full h-full bg-[var(--primary)] transition-transform duration-500 ease-in-out transform -translate-x-full group-hover:translate-x-0">

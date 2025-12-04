@@ -17,6 +17,7 @@ import spox_all from '@/assets/images/spox_all.png'
 import Image from "next/image";
 import spox_awareness from '@/assets/images/spox_awareness.png'
 import {useState} from "react";
+import Link from "next/link";
 
 const techStack = [
     {category: 'Frontend', items: ['Angular', 'TypeScript', 'RxJS', 'TradingView'], icon: <Code className="w-5 h-5"/>},
@@ -103,17 +104,21 @@ export default function SpoxComponent() {
                 </div>
 
                 <div className="flex items-center gap-2 justify-center mt-5">
-                    <button
+                    <Link
+                        href={'https://app.spox.trading'}
+                        target={'_blank'}
                         className="px-3 lg:px-5 py-3 text-white rounded-full font-medium flex items-center transition-all hover:shadow-xl hover:scale-105 text-sm lg:text-base"
                         style={{backgroundColor: '#0067DE'}}>
                         View Live Platform <ExternalLink className="w-5 h-5 ml-2"/>
-                    </button>
-                    <button
+                    </Link>
+                    <Link
+                        href={'https://global.spox.trading/whitepaper'}
+                        target={'_blank'}
                         className="px-3 lg:px-5 py-3 border-2 rounded-full font-medium flex items-center transition-all hover:shadow-lg text-sm lg:text-base"
                         style={{borderColor: '#0067DE', color: '#0067DE'}}>
                         <Github className="w-5 h-5 mr-2"/>
                         View White Paper
-                    </button>
+                    </Link>
                 </div>
             </div>
 

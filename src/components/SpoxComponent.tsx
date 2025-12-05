@@ -15,7 +15,6 @@ import {
 } from 'lucide-react';
 import spox_all from '@/assets/images/spox_all.png'
 import Image from "next/image";
-import spox_awareness from '@/assets/images/spox_awareness.png'
 import {useState} from "react";
 import Link from "next/link";
 

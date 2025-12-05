@@ -21,7 +21,11 @@ import {useState} from "react";
 import Link from "next/link";
 
 const techStack = [
-    {category: 'Frontend', items: ['Angular', 'TypeScript', 'RxJS', 'TradingView'], icon: <Code className="w-5 h-5"/>},
+    {
+        category: 'Frontend',
+        items: ['Angular', 'TypeScript', 'IndexedDB', 'TradingView'],
+        icon: <Code className="w-5 h-5"/>
+    },
     {category: 'Backend', items: ['NestJS', 'PostgreSQL', 'WebSockets', 'JWT'], icon: <Database className="w-5 h-5"/>},
     {category: 'Security', items: ['SCA', 'SAST', 'DAST', 'Threat Modeling'], icon: <Shield className="w-5 h-5"/>},
     {

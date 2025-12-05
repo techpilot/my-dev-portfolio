@@ -8,9 +8,11 @@ import {
     Database,
     ExternalLink,
     Github,
-    Lock, Mail,
+    Lock,
+    Mail,
     Server,
-    Shield, TrendingUp,
+    Shield,
+    TrendingUp,
     Zap
 } from 'lucide-react';
 import spox_all from '@/assets/images/spox_all.png'
@@ -102,7 +104,7 @@ export default function SpoxComponent() {
                     <p className="px-4 py-1.5 bg-[#696869b0]/20 rounded-full text-sm font-medium text-[#0a0a0a]">WebSockets</p>
                 </div>
 
-                <div className="flex items-center gap-2 justify-center mt-5">
+                <div className="flex flex-col md:flex-row items-center gap-2 justify-center mt-5">
                     <Link
                         href={'https://app.spox.trading'}
                         target={'_blank'}
@@ -145,7 +147,7 @@ export default function SpoxComponent() {
                 </div>
                 <div className="w-full md:w-[50%] grid grid-cols-2 gap-2 md:items-end md:pl-5 lg:pl-10 md:border-l">
                     <div className="p-7 bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl">
-                        <p className="text-lg md:text-2xl lg:text-3xl text-[#DD551B] font-extrabold">253+</p>
+                        <p className="text-lg md:text-2xl lg:text-3xl text-[#DD551B] font-extrabold">530+</p>
                         <p className="text-xs md:text-sm text-[var(--pri-text)] min-w-max">Active Users</p>
                     </div>
 
@@ -200,7 +202,7 @@ export default function SpoxComponent() {
                         <div className="mt-6 p-3 rounded-md" style={{backgroundColor: '#CCF381'}}>
                             <div className="flex items-center gap-3">
                                 <Award className="w-6 h-6" style={{color: '#0067DE'}}/>
-                                <span className="font-semibold text-sm lg:text-base" style={{color: '#0067DE'}}>Result: 253+ active users trading profitably</span>
+                                <span className="font-semibold text-sm lg:text-base" style={{color: '#0067DE'}}>Result: 530+ active users trading profitably</span>
                             </div>
                         </div>
                     </div>
@@ -421,6 +423,19 @@ export default function SpoxComponent() {
                 </div>
             </div>
 
+            {/*intro video*/}
+            <div className="flex justify-center items-center pt-20">
+                <iframe
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="w-[80vw] md:w-[70vw] lg:w-[65vw] xl:w-[50vw] h-[16rem] sm:h-[35rem] md:h-[28rem] rounded-xl"
+                    frameBorder="0"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    src="https://www.youtube.com/embed/7MMCGl2a8ZE?si=gCdwjOMvQYKZqZEQ"
+                    title="YouTube video player"
+                ></iframe>
+            </div>
+
             {/* CTA Section */}
             <div className="py-20 px-6">
                 <div className="max-w-5xl mx-auto">
@@ -437,17 +452,21 @@ export default function SpoxComponent() {
                                 security-first mindset, and user-focused design to your team.
                             </p>
                             <div className="flex flex-wrap justify-center gap-4">
-                                <button
+                                <Link
+                                    href={'https://app.spox.trading'}
+                                    target={'_blank'}
                                     className="px-8 py-4 bg-white rounded-full font-medium flex items-center transition-all hover:scale-105 shadow-lg"
                                     style={{color: '#0067DE'}}>
                                     <ExternalLink className="w-5 h-5 mr-2"/>
                                     View Live Platform
-                                </button>
-                                <button
+                                </Link>
+                                <a
+                                    href="mailto:ngwustephen99@gmail.com"
                                     className="px-8 py-4 border-2 border-white text-white rounded-full font-medium flex items-center transition-all hover:scale-105 hover:bg-white/10">
-                                    <Mail className="w-5 h-5 mr-2"/>
+                                    <Mail className="w-5 h-5 mr-2"
+                                    />
                                     Get in Touch
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>

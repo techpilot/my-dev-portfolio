@@ -380,7 +380,7 @@ export default function SpoxComponent() {
                     <div className="grid md:grid-cols-3 gap-6">
                         <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
                             <div className="text-3xl mb-4">🔄</div>
-                            <h3 className="text-xl font-bold mb-4 text-gray-900">What I'd Do Differently</h3>
+                            <h3 className="text-xl font-bold mb-4 text-gray-900">What I&#39;d Do Differently</h3>
                             <ul className="space-y-3 text-sm text-gray-600">
                                 <li className="flex items-start gap-2">
                                     <ChevronRight className="w-4 h-4 flex-shrink-0 mt-1" style={{color: '#0067DE'}}/>
@@ -431,9 +431,9 @@ export default function SpoxComponent() {
                             backgroundSize: '40px 40px'
                         }}></div>
                         <div className="relative">
-                            <h2 className="text-4xl font-bold text-white mb-4">Let's Build Something Amazing</h2>
+                            <h2 className="text-4xl font-bold text-white mb-4">Let&#39;s Build Something Amazing</h2>
                             <p className="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
-                                I'm open to opportunities where I can bring this level of technical rigor,
+                                I&#39;m open to opportunities where I can bring this level of technical rigor,
                                 security-first mindset, and user-focused design to your team.
                             </p>
                             <div className="flex flex-wrap justify-center gap-4">
